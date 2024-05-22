@@ -10,4 +10,6 @@ class TestStringCalculator(TestCase):
     def test_sum_with_newline(self):
         self.assertEqual(add("1 \n 2, 4"), 7)
 
+    def test_custom_delimiter(self):
+        self.assertEqual(add("//;\n 1; 2"), 3)
         
