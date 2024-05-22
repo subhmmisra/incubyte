@@ -9,6 +9,11 @@ def add(numbers):
 
     else:
         numbers_list = re.split(", | \n", numbers)
+    
+    negative_numbers = [int(i) for i in numbers_list if int(i)<0]
 
-    total_sum  = sum(int(i) for i in numbers_list)
+    if negative_numbers:
+        raise ValueError("No negatives allowed")
+
+    total_sum  = sum(int(i) for i in numbers_list )
     return total_sum
