@@ -3,6 +3,8 @@ from unittest import TestCase
 import re
 
 def add(numbers):
+    if not numbers: return 0
+    
     if numbers.startswith("//"):
         delimiter, numbers = numbers[2:].split("\n", 1)
         numbers_list = re.split(re.escape(delimiter), numbers)

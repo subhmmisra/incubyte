@@ -3,6 +3,8 @@ from unittest import TestCase
 from string_calculator import add
 
 class TestStringCalculator(TestCase):
+    def test_no_number_sum(self):
+        self.assertEqual(add(""), 0)
 
     def test_one_number_sum(self):
         self.assertEqual(add("1"), 1)
